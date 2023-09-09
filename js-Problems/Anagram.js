@@ -2,7 +2,6 @@
 
 
 function Anagram(first, second) {
-
     let obj = {}
     for (let i = 0; i < first.length; i++) {
         let char = first[i]
