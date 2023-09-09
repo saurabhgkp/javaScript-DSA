@@ -3,7 +3,6 @@
 
 function charCount(str) {
     let obj = {}
-
     for (let i = 0; i < str.length; i++) {
         let char = str[i]
         obj[char] ? obj[char] += 1 : obj[char] = 1
