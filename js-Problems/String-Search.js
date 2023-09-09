@@ -12,5 +12,4 @@ function stringSearch(long, short) {
     return count
 }
 
-
 console.log(stringSearch("lol dfk lod lol", "lol"))
