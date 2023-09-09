@@ -9,5 +9,4 @@ function sumZero(arr) {
     }
 
 }
-
 console.log(sumZero([-4, -2, -1, 0, 1, 3, 4, 5]))
