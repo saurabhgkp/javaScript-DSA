@@ -8,5 +8,4 @@ function longestWord(str) {
     }
     return longword
 }
-
 console.log(longestWord("gjhg sghjghdjh jhsgjh jhsg"))   
