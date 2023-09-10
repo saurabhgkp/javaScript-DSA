@@ -2,6 +2,7 @@
 
 
 function Anagram(first, second) {
+    if (first.length !== second.length) return false
     let obj = {}
     for (let i = 0; i < first.length; i++) {
         let char = first[i]
