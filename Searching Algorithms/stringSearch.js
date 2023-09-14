@@ -5,7 +5,7 @@ function stringSearch(str, val) {
             if (str[i + j] !== val[j]) {
                 break
             }
-            console.log(str[i + j], "===", val[j], j)
+            // console.log(str[i + j], "===", val[j], j)
             if (j === val.length - 1) count++
         }
     }
