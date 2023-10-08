@@ -14,6 +14,27 @@ function palindrome(str) {
 console.log(palindrome("racecar"))
 
 
+function palindrome(str) {
+    const reg = /[\W_]/g
+    const s = str.toLowerCase().replace(reg, "")
+    let left = 0
+    let right = str.length - 1
+    while (left <= right) {
+        if (str[left] !== str[right]) {
+            return false
+        }
+        else {
+            left++
+            right--
+        }
+    }
+    return true
+
+}
+
+console.log(palindrome("racecar"))
+
+
 // Palindrome Number 
 function Palindrome(number) {
     var remainder, temp, reversedNumber = 0;
