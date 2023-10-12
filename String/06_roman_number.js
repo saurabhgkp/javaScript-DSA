@@ -5,7 +5,7 @@ function romanNumber(n) {
         M: 1000,
         CM: 900,
         D: 500,
-        DC: 400,
+        CD: 400,
         C: 100,
         XC: 90,
         L: 50,
