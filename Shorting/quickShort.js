@@ -12,8 +12,6 @@ function helper(arr, start = 0, end = arr.length - 1) {
     }
     swap(arr, start, swapInd)
     return swapInd
-
-
 }
 function quickShort(arr, left = 0, right = arr.length - 1) {
     if (left < right) {

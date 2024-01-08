@@ -1,20 +1,36 @@
-function swap(i, j, arr) {
-    [arr[i], arr[j]] = [arr[j], arr[i]]
-}
 
-function selection(arr) {
-
-    for (let i = 0; i < arr.length; i++) {
-        let low = i
-        for (let j = i + 1; j < arr.length; j++) {
-            if (arr[low] > arr[j]) {
-                low = j
-            }
+function merge(arr1, arr2) {
+    let result = []
+    let i = 0
+    let j = 0
+    while (i < arr1.length && j < arr2.length) {
+        if (arr1[i] < arr2[j]) {
+            result.push(arr1[i])
+            i++
         }
-        swap(low, i, arr)
+        else {
+            result.push(arr2[j])
+            j++
+        }
     }
+    while (i < arr1.length) {
+        result.push(arr1[i])
+        i++
+    }
+    while (j < arr2.length) {
+        result.push(arr2[j])
+        j++
+    }
+    console.log(result)
+    return result
+}
+function mergeSort(arr) {
+    if (arr.length <= 1) return arr
+    let mid = parseInt(arr.length / 2)
+    let left = arr.slice(0, mid)
+    let right = arr.slice(mid)
 
-    return arr
+    return merge(left, right)
 }
 
-console.log(selection([9, 5, 3, 1]))
+console.log(mergeSort([7, 8, 3, 1, 6, 4, 9]))
