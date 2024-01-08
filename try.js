@@ -1,4 +1,8 @@
-function selectionShort(arr) {
+function swap(i, j, arr) {
+    [arr[i], arr[j]] = [arr[j], arr[i]]
+}
+
+function selection(arr) {
 
     for (let i = 0; i < arr.length; i++) {
         let low = i
@@ -6,13 +10,11 @@ function selectionShort(arr) {
             if (arr[low] > arr[j]) {
                 low = j
             }
-
         }
-        [arr[low], arr[i]] = [arr[i], arr[low]]
+        swap(low, i, arr)
     }
 
     return arr
-
 }
 
-console.log(selectionShort([4, 1, 5, 64, 53, 23, 453, 324, 243]))
+console.log(selection([9, 5, 3, 1]))

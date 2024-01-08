@@ -5,7 +5,7 @@ var threeSum = function (nums, target) {
     let r = nums.length - 1
     while (l < r) {
         for (let i = 1; i < nums.length; i++) {
-            console.log(nums[l], nums[i], nums[r], "==", nums[l] + nums[r] + nums[i])
+            // console.log(nums[l], nums[i], nums[r], "==", nums[l] + nums[r] + nums[i])
             if (nums[l] + nums[r] + nums[i] === target) {
                 return [l, i, r]
             }
