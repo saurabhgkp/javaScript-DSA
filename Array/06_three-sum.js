@@ -1,17 +1,26 @@
 // three sum 
 
-var threeSum = function (nums, target) {
+function threeSum(arr) {
     let l = 0
-    let r = nums.length - 1
+    let r = arr.length - 1
+    let result = []
+    arr = arr.sort((a, b) => (a - b))
+    if (arr.length < 3) return result
     while (l < r) {
-        for (let i = 1; i < nums.length; i++) {
-            // console.log(nums[l], nums[i], nums[r], "==", nums[l] + nums[r] + nums[i])
-            if (nums[l] + nums[r] + nums[i] === target) {
-                return [l, i, r]
+        let sum
+        for (let i = l + 1; i < r - 1; i++) {
+            sum = arr[l] + arr[i] + arr[r]
+            if (sum === 0) {
+                result.push([l, i, r])
             }
         }
-        r--
+        if (sum > 0) {
+            r--
+        }
+        else {
+            l++
+        }
     }
-    return false
-};
-console.log(threeSum([2, 4, 1, 11, 3, 15], 7))
+    return result
+}
+console.log(threeSum([-2, - 1, 1, 3, 4]))
