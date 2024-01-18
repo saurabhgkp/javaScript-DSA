@@ -15,7 +15,7 @@ function anagram(first, second) {
         }
     }
 
-    return obj
+    return true
 }
 
 console.log(anagram("accr", "cra"))
