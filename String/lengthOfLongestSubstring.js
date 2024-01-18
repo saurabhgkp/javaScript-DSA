@@ -1,5 +1,5 @@
-// Longest Substring Without Repeating Characters
-function uni(str) {
+// https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+function lengthOfLongestSubstring(str) {
     let obj = {}
     let startIn = 0
     let maxLn = 0
@@ -14,4 +14,4 @@ function uni(str) {
     }
     return maxLn
 }
-console.log(uni("dacvfasdfafa"))
+console.log(lengthOfLongestSubstring("dacvfasdfafa"))
